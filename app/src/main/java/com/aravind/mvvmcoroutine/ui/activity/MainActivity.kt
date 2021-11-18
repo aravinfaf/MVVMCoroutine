@@ -43,10 +43,9 @@ class MainActivity : AppCompatActivity() {
                 activityMainBinding.progressDialog.visibility = View.GONE
             }
         })
-            viewmodel.getAllmovies()
 
         viewmodel.error.observe(this,{
             Toast.makeText(this,it,Toast.LENGTH_SHORT).show()
         })
-    }
+        viewmodel.getAllmovies() }
 }
